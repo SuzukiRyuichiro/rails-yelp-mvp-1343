@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-body">
+      <h1 class="card-title display-4 text-center"><%= @restaurant.name %></h1>
+      <hr>
+      <p class="card-text">
+        <i class="fas fa-home"></i>
+        <%= @restaurant.address %>
+      </p>
+      <p class="card-text">
+        <i class="fas fa-flag"></i>
+        <%= @restaurant.category.capitalize %>
+      </p>
+      <p class="card-text">
+        <i class="fas fa-phone-alt"></i>
+        <%= @restaurant.phone_number %>
+      </p>
+    </div>
+  </div>
+</div>
