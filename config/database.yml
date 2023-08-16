@@ -5,25 +5,21 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  encoding: unicode
 
 development:
   <<: *default
-  database: rails_yelp_mvp_1343_development
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_yelp_mvp_1343_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: rails_yelp_mvp_1343_production
-  username: rails_yelp_mvp_1343
-  password: <%= ENV['RAILS_YELP_MVP_1343_PRODUCTION_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  database: db/production.sqlite3
