@@ -1,7 +1,7 @@
 databases:
   - name: yelp-1343
-    databaseName: yelp_1343
-    user: yelp_1343
+    databaseName: yelp-1343
+    user: yelp-1343
 
 services:
   - type: web
